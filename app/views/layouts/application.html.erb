@@ -15,20 +15,26 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-    <%= render "shared/nav", location: "top" %>
+      <header class="masthead mb-auto">
 
-    <%= login_helper %>
+        <div class="inner">
 
-    <%= yield %>
+          <%= render "shared/application_nav" %>
 
-    <br>
+          <%= login_helper %>
 
-    <%= set_copyright %>
+          <%= yield %>
 
-    <%= source_helper("application") %>
-    
+          <br>
+
+          <%= set_copyright %>
+
+           <%= source_helper("application") %>
+
+        </div>
+      </header>
+    </div>
   </body>
 </html>
